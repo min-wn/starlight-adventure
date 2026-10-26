@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f2ea">
+  <meta name="description" content="化身勇敢的女孩，穿过夕照花径、月光浮岛和星桥，去城堡寻找他。">
+  <title>奔向你 · 星光冒险</title>
+  <style>@font-face{font-family:Romance;src:local("Georgia")}*{box-sizing:border-box} :root{--paper:#f7f3ec;--ink:#45434c;--muted:#97909a;--rose:#b85d78;--line:#e4dcd4;--gold:#d3ac78;--serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;--sans:"Microsoft YaHei","PingFang SC",sans-serif}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#fffaf5,transparent 55%),var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,canvas:focus-visible{outline:3px solid #bb6b87;outline-offset:5px}button{border:0}button:disabled{cursor:default}a{color:inherit;text-decoration:none}[hidden]{display:none!important}.page{width:min(1440px,100%);margin:auto;padding:0 58px}.header{height:111px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;gap:12px;align-items:center;font-family:var(--serif);font-size:25px;letter-spacing:4px;font-weight:600}.brand-mark{font-size:42px;color:var(--rose);line-height:1;transform:rotate(-12deg);font-weight:400}.brand small{display:block;font-family:Georgia,serif;font-size:8px;letter-spacing:2.3px;color:#968a90;margin-top:7px;font-weight:400}.header-right{display:flex;gap:16px;align-items:center}.edition{font-family:var(--serif);font-size:12px;letter-spacing:2px;margin-right:15px;color:#83777d}.icon-button{width:35px;height:35px;display:grid;place-items:center;background:transparent;border:1px solid #dfd6d1;border-radius:50%;color:#74656d;transition:background .2s}.icon-button:hover{background:#eee3de}.icon-button svg{width:19px;height:19px}.help-button{font-family:Georgia,serif;font-size:19px}.chapter{display:flex;align-items:center;justify-content:space-between;height:63px;font-size:11px;letter-spacing:2px;color:#827680}.chapter i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--rose);margin:0 10px 2px 0}.chapter-number{font-family:Georgia,serif;font-size:10px;letter-spacing:2px}.stage{height:clamp(540px,48vw,680px);position:relative;overflow:hidden;border-radius:16px;background:#b7becd;box-shadow:0 18px 44px -28px #84788366;isolation:isolate}.stage canvas{width:100%;height:100%;display:block;outline:none}.grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' opacity='.5' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}.intro{position:absolute;top:15%;left:6.8%;animation:arrive 1.2s both}.eyebrow{display:flex;align-items:center;gap:12px;color:#746375;font-family:Georgia,serif;font-size:10px;letter-spacing:2.2px}.eyebrow>span{width:28px;height:1px;background:#a5828b}.intro h1{font-family:var(--serif);font-size:clamp(45px,5.3vw,76px);font-weight:500;letter-spacing:5px;line-height:1.4;margin:24px 0 20px;color:#494858;text-shadow:0 2px 28px #fff6ed77}.intro h1>span{color:#a55570}.intro p{font-size:13px;line-height:2.15;color:#6d6271;letter-spacing:1px;margin:0 0 27px}.primary{min-height:49px;padding:0 24px;background:#a95672;color:#fff5ef;display:inline-flex;align-items:center;justify-content:center;gap:35px;border-radius:7px;font-size:13px;letter-spacing:2px;box-shadow:0 5px 18px #9d4e6920;transition:transform .2s,background .2s}.primary:hover{transform:translateY(-2px);background:#974761}.primary>span{font-size:20px;font-weight:400}.intro-note{margin-top:16px;font-size:10px;color:#88747d;letter-spacing:1px}.scene-label{position:absolute;right:9%;top:35%;text-align:center;color:#63596e;font-family:var(--serif);font-size:12px;letter-spacing:2px;animation:arrive 1.8s both}.scene-label small{display:block;font:8px Georgia,serif;letter-spacing:2px;margin-top:9px;color:#8a7c91}.tiny-star{display:block;margin-bottom:13px;color:#fff6d9;font-size:23px;text-shadow:0 0 12px #fff}.scene-bottom{position:absolute;bottom:24px;left:32px;right:32px;display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:1.3px;color:#f9f1e9c4;pointer-events:none}.scene-bottom i{font-style:normal;margin:0 8px}.below-scene{padding:25px 2px;display:flex;justify-content:space-between;gap:20px;color:#97868b;font-size:11px;letter-spacing:1px}.little-heart{font-style:normal;font-size:19px;vertical-align:middle;margin-right:7px;color:#b78592}.scroll-note{font-family:var(--serif)}.scroll-note>span{font-size:18px;color:#b68b8c;margin-left:12px}footer{margin-top:14px;border-top:1px solid var(--line);padding:24px 0 26px;display:flex;justify-content:space-between;color:#a79b9f;font-size:9px;letter-spacing:1.5px}footer>span:first-child{font-family:Georgia,serif;font-size:8px}footer>span:last-child>span{margin-left:12px;color:#a46e7e}.hud{position:absolute;left:30px;right:30px;top:24px;display:flex;align-items:center;gap:24px;animation:arrive .5s both}.heart-counter{color:#fff6ed;font-size:15px;display:flex;align-items:center;gap:8px}.heart-counter>span:first-child{color:#f9a6b5;font-size:25px;text-shadow:0 1px 15px #f9a6b555}.heart-counter b{font:24px Georgia,serif}.counter-total{opacity:.55;font:15px Georgia,serif}.heart-counter small{font-size:10px;letter-spacing:1px;margin-left:9px;opacity:.8}.journey{margin-left:auto;width:170px;color:#fff7eb;font-size:9px;letter-spacing:1px}.journey-label{display:flex;justify-content:space-between;margin-bottom:9px}.journey-track{height:3px;background:#ffffff40;border-radius:3px}.journey-track>div{height:100%;width:0;background:#ffe8be;box-shadow:0 0 9px #ffe8be;border-radius:3px}.glass-button{width:35px;height:35px;background:#fff4;border:1px solid #fff5;color:#fff9ee;border-radius:50%}.toast{position:absolute;left:50%;top:92px;transform:translate(-50%,-8px);padding:12px 20px;border-radius:30px;background:#fcf4eae8;color:#8e5b70;box-shadow:0 6px 25px #473c6020;font-size:12px;letter-spacing:1px;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none;text-align:center;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.touch-controls{position:absolute;left:24px;right:24px;bottom:50px;display:flex;align-items:end;justify-content:space-between;pointer-events:none;user-select:none;-webkit-user-select:none}.touch-controls>div{display:flex;gap:12px}.touch-controls button{width:57px;height:57px;border:1px solid #fff7;border-radius:50%;background:#fcf1ec38;backdrop-filter:blur(5px);color:#fff8ef;font-size:25px;touch-action:none;pointer-events:auto;box-shadow:0 3px 12px #3e3c5c10}.touch-controls button:active,.touch-controls button.pressed{background:#af627d99}.touch-controls .jump-button{width:66px;height:66px;background:#b46b8799;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}.jump-button small{font-size:9px;letter-spacing:2px}.pause-overlay{position:absolute;inset:0;display:grid;place-items:center;background:#3f3d5c55;backdrop-filter:blur(8px)}.pause-card{text-align:center;background:#fcf6eeef;padding:45px 45px 30px;border:1px solid #fff9;border-radius:15px}.pause-card .eyebrow{justify-content:center}.pause-card h2{font:28px var(--serif);letter-spacing:2px;margin-top:20px}.pause-card p{color:#96828d;font-size:12px;margin:20px 0 28px}.text-button{display:block;background:none;color:#a37786;font-size:11px;margin:20px auto 0;letter-spacing:1px}.ending{position:absolute;inset:0;text-align:center;color:#fff2df;background:linear-gradient(180deg,#272b5c80 0%,#37325c20 68%,transparent);padding:38px 15px 0;display:flex;align-items:center;flex-direction:column;overflow:hidden}.ending-top{font-family:var(--serif);font-size:12px;letter-spacing:4px;animation:endingReveal 1.8s 1s both}.ending-top>span{color:#ffd99d;margin:0 20px;font-size:13px}.anniversary-number{font-family:Georgia,"Times New Roman",serif;font-size:clamp(112px,12.5vw,180px);line-height:1;letter-spacing:5px;font-weight:400;margin-top:20px;text-shadow:0 0 45px #ffd9b866,0 2px 1px #f2c994;animation:numberReveal 2.4s 1.6s both;background:linear-gradient(170deg,#fff9e7 20%,#ffd9a0 65%,#c89263);background-clip:text;-webkit-background-clip:text;color:transparent;position:relative}.anniversary-number>span{display:block;font-family:Georgia,serif;font-size:9px;letter-spacing:9px;color:#fff2dfb3;margin:12px 0 20px}.ending h2{font-family:var(--serif);font-size:clamp(19px,2vw,26px);letter-spacing:5px;font-weight:400;margin:0;animation:endingReveal 1.8s 3s both}.ending-rule{display:flex;align-items:center;gap:15px;font-family:var(--serif);font-size:13px;letter-spacing:3px;margin-top:18px;animation:endingReveal 1.8s 4s both}.ending-rule>span{height:1px;width:48px;background:linear-gradient(90deg,transparent,#e8c8a488)}.ending-rule>span:last-child{transform:rotate(180deg)}.ending-rule b{color:#ffc5ca;font-size:22px;font-weight:400}.ending-message{font-family:var(--serif);font-size:13px;letter-spacing:2px;line-height:2;margin:14px 0 18px;text-shadow:0 2px 12px #3c2946;animation:endingReveal 2s 5s both}.ending-actions{display:flex;gap:12px;animation:endingReveal 1.5s 7s both}.ending .primary{background:#f6e0c2;color:#6d4e64;box-shadow:0 0 35px #ffdfa425;min-height:43px;font-size:11px;gap:18px;letter-spacing:1px}.ending .primary:hover{background:#fff1d6}.secondary{min-height:43px;padding:0 20px;border:1px solid #f8dfc977;background:#f8e5d511;border-radius:7px;color:#ffefd8;font-size:11px;letter-spacing:1px;backdrop-filter:blur(8px)}.ending-replay{background:none;color:#fbe2c9bd;margin-top:17px;font-size:10px;letter-spacing:2px;animation:endingReveal 1.5s 8s both}.stage[data-mode=ending]{box-shadow:0 16px 70px -20px #a0658155}.stage[data-mode=ending] .touch-controls,.stage[data-mode=ending] .scene-bottom{display:none!important}.stage[data-mode=playing] .scene-bottom>span:first-child{visibility:hidden}.stage[data-mode=playing] .scene-bottom>span:last-child{margin-left:auto}dialog{color:#695462;border:1px solid #e2d1c4;border-radius:14px;background:radial-gradient(at top right,#ffe9e4,transparent 45%),#fcf7ee;padding:46px;width:min(500px,calc(100% - 32px));max-height:85dvh;box-shadow:0 25px 100px #27223e55}dialog::backdrop{background:#3d355d88;backdrop-filter:blur(8px)}dialog .eyebrow{font-size:9px;letter-spacing:2px}dialog h2{font:28px/1.6 var(--serif);letter-spacing:2px;color:#88576c;margin:22px 0}dialog p{font-size:12px;line-height:2.3}kbd{display:inline-block;background:#ede2dc;padding:0 7px;border-radius:3px;line-height:1.7;font-family:inherit}dialog .soft-note{color:#9b8890;font-size:11px;margin:20px 0 24px}.close-dialog{position:absolute;right:17px;top:12px;background:none;font-size:26px;color:#9c7a87;font-family:Georgia,serif}.letter-dialog{width:min(580px,calc(100% - 28px));padding:42px 54px}.letter-seal{font-family:Georgia,serif;color:#b37285;font-size:40px;line-height:1;margin-bottom:20px}.letter-dialog h2{font-size:27px;margin:22px 0}.letter-body{font-family:var(--serif);letter-spacing:.6px}.letter-body p{font-size:13px;line-height:2.2;margin:22px 0}.letter-promise{color:#a05170}.letter-signature{text-align:right;font-family:var(--serif);font-size:13px;letter-spacing:1px;margin:25px 0}.letter-signature>span{color:#aa617c}.letter-signature small{display:block;font:8px Georgia,serif;letter-spacing:2px;margin-top:9px;color:#af999f}.letter-dialog .primary{width:100%;margin-top:10px}.sr-only{position:absolute;clip-path:inset(50%);height:1px;width:1px;overflow:hidden}@keyframes arrive{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@keyframes endingReveal{from{opacity:0;transform:translateY(18px);filter:blur(6px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}@keyframes numberReveal{from{opacity:0;transform:scale(.88);filter:blur(15px)}to{opacity:1;transform:scale(1);filter:blur(0)}}@media(min-width:901px) and (hover:hover){.stage[data-mode=playing] .touch-controls{display:none!important}}@media(min-width:1500px){.stage{height:690px}}@media(max-width:900px){.page{padding:0 28px}.header{height:93px}.edition{font-size:10px;margin-right:4px}.intro{left:7%;top:16%}.intro h1{font-size:55px}.scene-label{right:6%;top:43%;font-size:10px}.stage{height:610px}.scene-bottom{left:24px;right:24px}.scene-bottom>span:last-child{display:none}.below-scene .scroll-note{display:none}.ending{padding-top:47px}.anniversary-number{font-size:145px;margin-top:22px}.ending-message{margin-top:19px}.ending h2{font-size:22px}}@media(max-width:540px){.page{padding:0 17px}.header{height:86px}.brand{font-size:22px;gap:8px;letter-spacing:3px}.brand-mark{font-size:36px}.brand small{font-size:6px;letter-spacing:1.6px}.header-right{gap:9px}.edition{display:none}.icon-button{width:31px;height:31px}.chapter{height:51px;font-size:9px;letter-spacing:1px}.chapter-number{font-size:7px;letter-spacing:1px}.stage{height:clamp(560px,75svh,660px);border-radius:12px}.intro{top:12%;left:8%;right:5%}.intro .eyebrow{font-size:7px;letter-spacing:1.6px}.intro h1{font-size:46px;letter-spacing:3px;line-height:1.4;margin-top:24px;margin-bottom:18px}.intro p{font-size:11px;line-height:2;letter-spacing:.5px;margin-bottom:24px}.primary{min-height:46px;font-size:12px;padding:0 22px}.intro-note{font-size:8px;letter-spacing:.4px;margin-top:13px}.scene-label{top:auto;bottom:22%;right:8%;font-size:9px;letter-spacing:1px}.scene-label small{font-size:6px;letter-spacing:1px}.tiny-star{font-size:18px;margin-bottom:6px}.scene-bottom{bottom:20px;left:20px;right:20px;font-size:8px;letter-spacing:.5px}.below-scene{font-size:9px;letter-spacing:0;padding:19px 0}.little-heart{font-size:15px;margin-right:3px}footer{margin-top:5px;padding:20px 0;font-size:8px;letter-spacing:.3px;gap:10px}footer>span:first-child{font-size:6px;letter-spacing:.7px}footer>span:last-child>span{margin-left:3px}.hud{left:18px;right:18px;top:19px;gap:15px}.heart-counter{gap:5px}.heart-counter small{display:none}.journey{width:100px}.toast{font-size:10px;padding:11px 14px;max-width:95%;letter-spacing:0;top:75px}.touch-controls{left:18px;right:18px;bottom:35px}.touch-controls button{width:53px;height:53px}.touch-controls .jump-button{height:62px;width:62px}.pause-card{padding:35px 25px}.pause-card h2{font-size:23px}.ending{padding:40px 12px 0}.ending-top{font-size:9px;letter-spacing:2px}.ending-top>span{margin:0 12px}.anniversary-number{font-size:116px;letter-spacing:1px;margin-top:25px}.anniversary-number>span{font-size:7px;letter-spacing:6px;margin-top:10px;margin-bottom:22px}.ending h2{font-size:18px;letter-spacing:2px}.ending-rule{margin-top:18px;font-size:12px}.ending-message{font-size:11px;letter-spacing:1px;margin:17px 0 22px}.ending-actions{gap:8px}.ending .primary{font-size:10px;padding:0 14px;gap:10px;letter-spacing:0}.secondary{padding:0 12px;font-size:10px;letter-spacing:0}.ending-replay{font-size:9px;margin-top:18px}dialog{padding:39px 27px}.letter-dialog{padding:37px 30px}.letter-dialog h2{font-size:24px}.letter-body p{font-size:12px;letter-spacing:0}.letter-dialog .eyebrow{font-size:8px;letter-spacing:1.4px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;scroll-behavior:auto!important;transition:none!important}}
+.ending-replay{position:absolute;right:28px;bottom:24px;margin:0}@media(max-width:540px){.ending-replay{right:18px;bottom:18px}.scene-label{bottom:27%;right:8%}}
+.vitals{display:flex;flex-direction:column;gap:5px;color:#ffd4ce;font-size:18px;letter-spacing:3px}.vitals small{font-size:8px;color:#fff5eb;letter-spacing:1px}.rescue-overlay{position:absolute;inset:0;pointer-events:none;display:flex;justify-content:center;align-items:flex-start;padding:15% 15px 0;text-align:center;color:#e7edff}.rescue-copy{animation:arrive .7s both}.rescue-copy>span{font-family:var(--serif);font-size:11px;letter-spacing:3px;color:#c6d5f4}.rescue-copy h2{font:26px/1.6 var(--serif);letter-spacing:2px;margin:20px 0 15px;text-shadow:0 0 25px #bedbff66}.rescue-copy p{font-size:12px;color:#ccdbed;letter-spacing:1px}.rescue-copy small{display:block;font-size:9px;letter-spacing:1px;color:#adbdd6;margin-top:17px}@media(max-width:540px){.hud{gap:10px}.vitals{font-size:14px;letter-spacing:1px}.vitals small{font-size:7px;letter-spacing:0}.heart-counter b{font-size:20px}.heart-counter>span:first-child{font-size:20px}.counter-total{font-size:12px}.journey{width:83px}.rescue-overlay{padding-top:24%}.rescue-copy h2{font-size:19px;letter-spacing:0}.rescue-copy>span{font-size:9px}.rescue-copy p{font-size:10px}}
+</style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a class="brand" href="#" aria-label="奔向你首页"><span class="brand-mark">♡</span><span>奔向你<small id="brand-subtitle">ONE DESTINATION. ONLY YOU.</small></span></a>
+      <div class="header-right"><span class="edition" id="edition">穿越星光 · 去见你</span><button class="icon-button" id="sound" aria-label="开启音乐" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2.5"/><ellipse cx="17" cy="16" rx="3" ry="2.5"/><path id="mute-line" d="M3 3l18 18"/></svg></button><button class="icon-button help-button" id="help" aria-label="玩法说明">?</button></div>
+    </header>
+    <main>
+      <div class="chapter"><span id="chapter-name"><i></i> 夕照花径 · 月光浮岛 · 星桥城堡</span><span class="chapter-number">THE STARLIGHT ADVENTURE</span></div>
+      <section class="stage" id="stage" data-mode="intro" aria-label="奔向你小游戏">
+        <canvas id="scene" aria-label="控制女孩，方向键或 A D 移动，空格或 W 跳跃，穿过断桥、躲避荆棘和巡逻怪，走到城堡与他相遇。" tabindex="0"></canvas>
+        <div class="grain" aria-hidden="true"></div>
+        <div class="intro" id="intro">
+          <div class="eyebrow"><span></span> FOR ALL THE DAYS TO COME</div>
+          <h1>越过山海，<br>刚好是<span>你。</span></h1>
+          <p>有些冒险，是为了拯救世界。<br>而我的这一场，只为走到你身边。</p>
+          <button class="primary" id="start">向你出发 <span>↗</span></button>
+          <div class="intro-note">化身勇敢的女孩，穿过三段试炼，去城堡找到他。</div>
+        </div>
+        <div class="scene-label" id="scene-label"><span class="tiny-star">✦</span> 他在星光城堡等你<small>THE WAY TO YOUR HEART</small></div>
+        <div class="hud" id="hud" hidden>
+          <div class="heart-counter"><span>♥</span> <b id="heart-count">0</b><span class="counter-total">/ 12</span><small>沿途的心动</small></div>
+          <div class="vitals"><span id="health" aria-label="生命 3 格">♥♥♥</span><small id="death-count">陨落 0 次</small></div>
+          <div class="journey"><div class="journey-label"><span>向你靠近</span><span id="progress-label">0%</span></div><div class="journey-track"><div id="progress"></div></div></div>
+          <button class="glass-button" id="pause" aria-label="暂停游戏">Ⅱ</button>
+        </div>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        <div class="rescue-overlay" id="rescue-overlay" hidden role="status" aria-live="polite"><div class="rescue-copy"><span>当星光暗下，我会找到你</span><h2>别怕，这一次换我奔向你。</h2><p>他的幻影正凝聚星光，唤醒你……</p><small>即将回到最近的星光存档点</small></div></div>
+        <div class="touch-controls" id="touch-controls" hidden aria-label="触屏操作">
+          <div><button data-key="left" aria-label="向左">←</button><button data-key="right" aria-label="向右">→</button></div><button class="jump-button" data-key="jump" aria-label="跳跃">↑<small>跳跃</small></button>
+        </div>
+        <div class="pause-overlay" id="pause-overlay" hidden><div class="pause-card"><span class="eyebrow">TAKE YOUR TIME</span><h2>等一等，也没关系。</h2><p>他一直都在终点，等你靠近。</p><button class="primary" id="resume">继续奔向你 <span>→</span></button><button class="text-button" id="restart">重新出发</button></div></div>
+        <div class="ending" id="ending" hidden>
+          <div class="ending-top">千 日 为 序 <span>✦</span> 余 生 为 期</div>
+          <div class="anniversary-number">1000<span>DAYS OF US</span></div>
+          <h2>和你在一起的第 1000 天</h2>
+          <div class="ending-rule"><span></span> 我 <b>♡</b> 你 <span></span></div>
+          <p class="ending-message">原来最好的通关奖励，<br>是走过一千天，身边依然是你。</p>
+          <div class="ending-actions"><button class="primary" id="read-letter">拆开给你的情书 <span>♡</span></button><button class="secondary" id="keepsake">收藏这一刻 ↓</button></div>
+          <button class="ending-replay" id="replay">再奔向你一次 ↗</button>
+        </div>
+        <div class="scene-bottom" id="scene-bottom"><span>← → 移动 <i>·</i> SPACE 跳跃</span><span>把平凡的日子，走成我们的童话。</span></div>
+      </section>
+      <div class="below-scene"><span><i class="little-heart">♡</i> 不必成为超级英雄，奔向你就已经很勇敢。</span><span class="scroll-note" id="scroll-note">循着星光，去见想见的人 <span>✧</span></span></div>
+    </main>
+    <footer><span>A LITTLE ADVENTURE. AN ENDLESS LOVE.</span><span>我们的故事，还在继续 <span>↗</span></span></footer>
+  </div>
+  <dialog id="help-dialog"><button class="close-dialog" data-close aria-label="关闭说明">×</button><span class="eyebrow">A LITTLE GUIDE</span><h2>这趟旅程，需要一点勇气。</h2><p>你是奔向城堡的女孩，他在那里等你。<br>用 <kbd>←</kbd> <kbd>→</kbd> 或 <kbd>A</kbd> <kbd>D</kbd> 移动，<br>用 <kbd>空格</kbd>、<kbd>↑</kbd> 或 <kbd>W</kbd> 跳跃。<br>手机可同时按住方向按钮和点按跳跃。</p><p>跨越断崖，借助带金边的移动平台。<br>从上方踩中巡逻怪可以击退它，侧面碰撞会受伤。<br>沿途有 12 颗爱心，收不齐也能通关。</p><p class="soft-note">生命三格，荆棘和怪物会扣血，坠落直接死亡。<br>死亡后，男主会化为星光幻影，将你唤回存档点。<br>触碰星光旗帜存档并恢复生命，爱心不会丢。<br>按 <kbd>Esc</kbd> 或右上角 Ⅱ 可暂停。</p><button class="primary" data-close>知道啦 <span>♡</span></button></dialog>
+  <dialog id="letter-dialog" class="letter-dialog"><button class="close-dialog" data-close aria-label="合上情书">×</button><div class="letter-seal">♡</div><span class="eyebrow">A LETTER, JUST FOR YOU</span><h2>亲爱的，<br>第 1000 天快乐。</h2><div class="letter-body"><p>如果相遇是一场奇遇，<br>那么和你一起的每一天，都是我想珍藏的续集。</p><p>这一千天里，最让我心动的，<br>不只是某个特别的日子，<br>还有你笑着看向我时，<br>那些突然变得明亮的、平凡的瞬间。</p><p>刚才的路，有小小的障碍，也有沿途的星光。<br>就像我们——不必每一步都完美，<br>只要最后，还能牵起彼此的手。</p><p>谢谢你，让「明天」变成一件值得期待的事。</p><p class="letter-promise">第 1001 天，想和你一起。<br>以后的每一天，也都想。</p></div><div class="letter-signature">一直奔向你的我 <span>♡</span><small>1000 DAYS & COUNTING</small></div><button class="primary" data-close>把这份心动收好 <span>♡</span></button></dialog>
+  <script>(function (root) {
+  'use strict';
+  class Game {
+    constructor() {
+      this.floor = 620; this.end = 11800; this.won = false; this.paused = false; this.collected = 0; this.rescues = 0;
+      this.elapsed = 0; this.health = 3; this.hits = 0; this.stomps = 0; this.checkpointIndex = 0; this.deaths = 0; this.deathTimer = 0;
+      this.checkpoints = [{x:100,name:'夕照花径'},{x:3880,name:'月光浮岛'},{x:7730,name:'星桥城堡'},{x:11360,name:'最后一程'}];
+      this.player = { x: 100, y: 562, w: 34, h: 58, vx: 0, vy: 0, grounded: true, facing: 1, invulnerable: 0, platformId: null };
+      this.pits = [[1300,185],[2490,210],[3500,210],[4580,205],[5510,370],[6750,225],[8470,225],[9350,395],[10660,235]].map(([x,w])=>({x,w}));
+      this.platforms = [
+        [710,550,150],[865,485,125],[1730,535,170],[1910,490,130],[2870,550,135],[3020,485,130],
+        [4220,550,140],[4830,540,145],[4985,475,130],[6140,540,145],[6470,490,130],
+        [7960,550,150],[8810,540,130],[8940,475,125],[9940,540,130],[11010,545,135],[11160,480,135]
+      ].map(([x,y,w],id)=>({id,x,y,w,h:24}));
+      this.platforms.push({id:17,x:5640,originX:5640,y:560,w:115,h:22,moving:true,range:48,speed:1.1,phase:0},
+        {id:18,x:9490,originX:9490,y:540,w:110,h:22,moving:true,range:65,speed:.95,phase:0});
+      this.hazards = [[600,65],[1080,92],[1780,90],[2250,100],[2920,120],[3290,75],[4070,110],[4320,75],[4920,100],
+        [6240,130],[6480,80],[7190,140],[8050,110],[8750,150],[10040,150],[10400,75],[11100,145],[11620,80]].map(([x,w])=>({x,y:587,w,h:33}));
+      this.enemies = [[1980,1930,2170,63],[3120,3080,3240,70],[4430,4400,4500,58],[6020,5930,6100,77],
+        [7420,7350,7520,80],[8290,8230,8390,69],[9920,9790,10000,85],[11520,11450,11580,73]].map(([x,min,max,speed])=>({x,y:584,w:38,h:36,min,max,speed,direction:1,dead:false}));
+      this.hearts = [[360,572],[925,445],[1970,450],[3080,445],[3990,572],[5050,435],[5700,510],[6530,450],[7890,572],[9000,435],[9540,490],[11220,440]].map(([x,y])=>({x,y,taken:false}));
+      this.jumpHeld = false; this.buffer = 0; this.coyote = .1;
+    }
+    step(dt, input = {}) {
+      if (this.paused || this.won) return;
+      const jumpPressed = !!input.jump && !this.jumpHeld; this.jumpHeld = !!input.jump;
+      if (jumpPressed) this.buffer = .12;
+      let remaining = Math.min(dt, .1);
+      while (remaining > 0 && !this.won) { const d = Math.min(remaining, 1/120); this.tick(d, input); remaining -= d; }
+    }
+    tick(dt, input) {
+      const p = this.player;
+      if (this.deathTimer > 0) {
+        this.deathTimer = Math.max(0, this.deathTimer - dt);
+        if (this.deathTimer === 0) this.respawn();
+        return;
+      }
+      this.elapsed += dt;
+      for (const platform of this.platforms) {
+        if (!platform.moving) continue;
+        const oldX = platform.x;
+        platform.x = platform.originX + Math.sin(this.elapsed * platform.speed + platform.phase) * platform.range;
+        if (p.grounded && p.platformId === platform.id) p.x += platform.x - oldX;
+      }
+      for (const e of this.enemies) {
+        if (e.dead) continue;
+        e.x += e.direction * e.speed * dt;
+        if (e.x < e.min || e.x > e.max) { e.x = Math.max(e.min,Math.min(e.max,e.x)); e.direction *= -1; }
+      }
+      this.buffer -= dt; this.coyote = p.grounded ? .1 : this.coyote - dt; p.invulnerable = Math.max(0, p.invulnerable - dt);
+      const direction = Number(!!input.right) - Number(!!input.left);
+      p.vx += (direction * 310 - p.vx) * Math.min(1, dt * (direction ? 14 : 20));
+      if (direction) p.facing = direction;
+      if (this.buffer > 0 && this.coyote > 0) { p.vy = -740; p.grounded = false; p.platformId = null; this.buffer = 0; this.coyote = 0; }
+      const bottom = p.y + p.h;
+      p.x = Math.max(18, Math.min(this.end, p.x + p.vx * dt));
+      p.vy += 1800 * dt; p.y += p.vy * dt; p.grounded = false; p.platformId = null;
+      if (p.y > 850) { this.die(); return; }
+      const foot = p.x + p.w / 2;
+      const overPit = this.pits.some(gap => foot > gap.x && foot < gap.x + gap.w);
+      let ground = !overPit && bottom <= this.floor + 2 ? this.floor : Infinity;
+      let platformId = null;
+      for (const plat of this.platforms) {
+        if (p.x + p.w > plat.x && p.x < plat.x + plat.w && bottom <= plat.y + 2 && p.y + p.h >= plat.y && p.vy >= 0 && plat.y < ground) { ground = plat.y; platformId = plat.id; }
+      }
+      if (p.y + p.h >= ground && p.vy >= 0) { p.y = ground - p.h; p.vy = 0; p.grounded = true; p.platformId = platformId; }
+      for (const heart of this.hearts) {
+        if (!heart.taken && Math.abs(p.x + p.w/2 - heart.x) < 32 && Math.abs(p.y + p.h/2 - heart.y) < 38) { heart.taken = true; this.collected++; }
+      }
+      for (const h of this.hazards) {
+        if (p.invulnerable === 0 && p.x + p.w - 7 > h.x && p.x + 7 < h.x + h.w && p.y + p.h > h.y + 5 && p.y < h.y + h.h) this.damage();
+      }
+      for (const e of this.enemies) {
+        if (e.dead || p.x + p.w - 4 <= e.x || p.x + 4 >= e.x + e.w || p.y + p.h <= e.y || p.y >= e.y + e.h) continue;
+        if (p.vy > 0 && bottom <= e.y + 10) { e.dead = true; p.vy = -430; p.grounded = false; p.platformId = null; this.stomps++; }
+        else if (p.invulnerable === 0) this.damage();
+      }
+      for (let i = this.checkpointIndex + 1; i < this.checkpoints.length; i++) {
+        const cp = this.checkpoints[i];
+        if (Math.abs(p.x - cp.x) < 55 && p.grounded && p.platformId === null) { this.checkpointIndex = i; this.health = 3; }
+      }
+      if (p.x >= this.end - 20 && p.grounded && p.platformId === null && p.y + p.h <= this.floor + 2) this.won = true;
+    }
+    damage() {
+      this.health--; this.hits++;
+      if (this.health <= 0) { this.die(); return; }
+      const p = this.player;
+      p.vx = -p.facing * 180; p.vy = -270; p.grounded = false; p.platformId = null; p.invulnerable = 1.35;
+    }
+    die() {
+      if (this.deathTimer > 0) return;
+      this.health = 0; this.deaths++; this.deathTimer = 3.6;
+      this.player.vx = 0; this.player.vy = 0;
+    }
+    respawn() {
+      this.health = 3;
+      this.rescues++;
+      Object.assign(this.player, {x:this.checkpoints[this.checkpointIndex].x,y:this.floor-this.player.h,vx:0,vy:0,grounded:true,platformId:null,invulnerable:1.5});
+      this.buffer = 0; this.coyote = .1;
+    }
+  }
+  if (typeof module !== 'undefined' && module.exports) module.exports = { Game };
+  else root.LoveGame = Game;
+})(typeof window !== 'undefined' ? window : globalThis);
+</script>
+  <script>(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const canvas = $('scene'), ctx = canvas.getContext('2d'), stage = $('stage');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let width = 1280, height = 720, time = 0, last = 0, camera = 0, mode = 'intro', game = new LoveGame(), endingAt = 0;
+  let particles = [], fireworks = [], nextFirework = 0, lastCount = 0, lastRescues = 0, lastDeaths = 0, lastHits = 0, lastCheckpoint = 0, lastStomps = 0, toastUntil = 0, musicEnabled = false;
+  const input = { left: false, right: false, jump: false }, keyInputs = { left: false, right: false, jump: false }, touchInputs = { left: new Set(), right: new Set(), jump: new Set() };
+  const palettes = ['#ffe2af','#f6b3c4','#fcead1','#c9d6ed','#eeb4ce'];
+  const memories = ['第一颗心动，是遇见你。', '想和你分享每一个日落。', '平凡日子里，也想偏爱你。', '穿过人海，依然选择你。', '月光会记得我们的约定。', '想见你的心，比山海更坚定。', '等风停，也等你靠近。', '迷路的时候，抬头看看星光。', '所有的勇敢，都有你的名字。', '再越过一座桥，就离你更近。', '把沿途星光，全部带给你。', '最后一颗心动，是以后的每一天。'];
+  const random = (a,b) => a + Math.random()*(b-a);
+  const hash = n => { const x = Math.sin(n * 127.1 + 311.7)*43758.5453; return x-Math.floor(x); };
+  function resize() {
+    const r = stage.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2);
+    width = r.width/r.height*720; canvas.width = Math.round(r.width*dpr); canvas.height = Math.round(r.height*dpr);
+    ctx.setTransform(canvas.width/width,0,0,canvas.height/height,0,0);
+    if (mode === 'playing') camera = Math.max(0, Math.min(game.end-width*.65, game.player.x-width*.32));
+  }
+  new ResizeObserver(resize).observe(stage);
+  function roundRect(x,y,w,h,r,fill,stroke) { ctx.beginPath();ctx.roundRect(x,y,w,h,r);if(fill){ctx.fillStyle=fill;ctx.fill();}if(stroke){ctx.strokeStyle=stroke;ctx.stroke();} }
+  function ellipse(x,y,rx,ry,fill) { ctx.beginPath();ctx.ellipse(x,y,rx,ry,0,0,Math.PI*2);ctx.fillStyle=fill;ctx.fill(); }
+  function line(x1,y1,x2,y2,color,size=1) {ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.strokeStyle=color;ctx.lineWidth=size;ctx.stroke();}
+  function heart(x,y,size,color,rotation=0) {
+    ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(size/20,size/20);ctx.beginPath();ctx.moveTo(0,7);ctx.bezierCurveTo(-23,-7,-8,-20,0,-10);ctx.bezierCurveTo(8,-20,23,-7,0,7);ctx.fillStyle=color;ctx.fill();ctx.restore();
+  }
+  function star(x,y,size,color) {ctx.beginPath();ctx.moveTo(x,y-size);ctx.quadraticCurveTo(x+size*.2,y-size*.2,x+size,y);ctx.quadraticCurveTo(x+size*.2,y+size*.2,x,y+size);ctx.quadraticCurveTo(x-size*.2,y+size*.2,x-size,y);ctx.quadraticCurveTo(x-size*.2,y-size*.2,x,y-size);ctx.fillStyle=color;ctx.fill();}
+  function cloud(x,y,s,alpha) {ctx.save();ctx.globalAlpha=alpha;ctx.fillStyle='#fff3ef';ctx.beginPath();ctx.ellipse(x,y,100*s,15*s,0,0,7);ctx.ellipse(x-40*s,y-9*s,45*s,19*s,0,0,7);ctx.ellipse(x+7*s,y-18*s,48*s,30*s,0,0,7);ctx.ellipse(x+52*s,y-6*s,41*s,18*s,0,0,7);ctx.fill();ctx.restore();}
+  function mountainLayer(y,amplitude,color,parallax,seed) {
+    ctx.beginPath();ctx.moveTo(-20,720);
+    const shift = camera*parallax;
+    for(let x=-100;x<width+180;x+=12){const wx=x+shift;const yy=y+Math.sin(wx*.004+seed)*amplitude+Math.sin(wx*.009+seed*4)*amplitude*.35;ctx.lineTo(x,yy);}
+    ctx.lineTo(width+180,720);ctx.fillStyle=color;ctx.fill();
+  }
+  function background(ending=false) {
+    const sky=ctx.createLinearGradient(0,0,0,720);
+    if(ending){sky.addColorStop(0,'#172442');sky.addColorStop(.44,'#635476');sky.addColorStop(.83,'#d79aa6');sky.addColorStop(1,'#e4b7b0');}
+    else{sky.addColorStop(0,'#a4b3cd');sky.addColorStop(.4,'#d7c9da');sky.addColorStop(.72,'#f3cfbd');sky.addColorStop(1,'#eec6b1');}
+    ctx.fillStyle=sky;ctx.fillRect(0,0,width,720);
+    const moonX=width*(ending?.5:.74),moonY=ending?135:125;
+    const glow=ctx.createRadialGradient(moonX,moonY,8,moonX,moonY,ending?210:145);glow.addColorStop(0,ending?'#ffdaaa44':'#fff2d55c');glow.addColorStop(1,'#fff2d500');ctx.fillStyle=glow;ctx.fillRect(0,0,width,500);
+    ellipse(moonX,moonY,ending?43:39,ending?43:39,ending?'#ffedcd':'#fff1d9');
+    if(!ending)ellipse(moonX-13,moonY-9,39,39,'#b6bcd0');
+    for(let i=0;i<65;i++){const x=hash(i+1)*width,y=hash(i+211)*390,opacity=(ending?.6:.28)+Math.sin(time*.8+i)*.18;ctx.globalAlpha=opacity;star(x,y,hash(i+41)*2+1,'#fff4d6');}ctx.globalAlpha=1;
+    for(let i=0;i<5;i++){const x=((i*330+80-camera*.06+(reduced?0:time*2))%(width+350)+width+350)%(width+350)-140;cloud(x,110+i%3*87,.55+hash(i)*.6,ending?.12:.4);}
+    mountainLayer(400,66,ending?'#69627f':'#b0a9c3',.1,2);
+    mountainLayer(460,48,ending?'#867790':'#c4acc7',.17,5);
+    mountainLayer(507,37,ending?'#9c8299':'#d7b7ca',.23,9);
+    const river=ctx.createLinearGradient(0,515,0,625);river.addColorStop(0,ending?'#dcb8b855':'#f8dacd99');river.addColorStop(1,'#a8bcc3');ctx.fillStyle=river;ctx.fillRect(0,531,width,100);
+    for(let i=0;i<24;i++){const x=hash(i+3)*width,y=539+hash(i+92)*75;ctx.globalAlpha=.15+hash(i)*.2;line(x,y,x+20+hash(i+5)*65,y,ending?'#ffe1c2':'#fff5e4',1);}ctx.globalAlpha=1;
+    mountainLayer(590,17,ending?'#747a82':'#95a5aa',.38,15);
+    for(let i=0;i<Math.ceil(width/190)+2;i++){let x=i*190-(camera*.3%190);tree(x,585,42+hash(i+7)*35,ending?'#797a8d':'#9b9eb1',.65);}
+  }
+  function tree(x,y,h,color,alpha=1) {ctx.save();ctx.globalAlpha=alpha;line(x,y,x,y-h*.65,color,3);ellipse(x,y-h*.6,h*.3,h*.37,color);ellipse(x-h*.19,y-h*.48,h*.21,h*.24,color);ellipse(x+h*.17,y-h*.47,h*.22,h*.25,color);ctx.restore();}
+  function flower(x,y,s,phase,color='#e9a9b7') {const sway=reduced?0:Math.sin(time*.9+phase)*3;ctx.save();ctx.translate(x,y);ctx.scale(s,s);ctx.strokeStyle='#798b86';ctx.lineWidth=1.3;ctx.beginPath();ctx.moveTo(0,0);ctx.quadraticCurveTo(-3,-10,sway,-20);ctx.stroke();ellipse(-4,-8,4,1.8,'#8d9e8e');for(let j=0;j<5;j++){let a=j/5*Math.PI*2;ellipse(sway+Math.cos(a)*3,-20+Math.sin(a)*3,2.9,2.9,color);}ellipse(sway,-20,1.5,1.5,'#fbe3a5');ctx.restore();}
+  function ground(ending=false) {
+    const gradient=ctx.createLinearGradient(0,620,0,720);gradient.addColorStop(0,ending?'#777c89':'#8e9e9a');gradient.addColorStop(.12,ending?'#747485':'#9ea4a2');gradient.addColorStop(1,ending?'#4b526c':'#b6a7b1');ctx.fillStyle=gradient;ctx.fillRect(0,620,width,100);
+    ctx.fillStyle=ending?'#9da090':'#aaba9b';ctx.beginPath();ctx.moveTo(0,620);for(let x=0;x<width+8;x+=8){ctx.lineTo(x,618+Math.sin((x+camera)*.03)*3);ctx.lineTo(x+4,611+hash(Math.floor((x+camera)/8))*6);}ctx.lineTo(width,630);ctx.lineTo(0,630);ctx.fill();
+    for(let i=Math.floor(camera/32)-2;i<(camera+width)/32+2;i++){let x=i*32-camera+hash(i)*16;let y=639+hash(i+50)*74;ctx.globalAlpha=.45;ellipse(x,y,hash(i)*3+1,1,'#ecd1bf');ctx.globalAlpha=1;if(i%2===0)flower(x,631+hash(i+90)*14,.8+hash(i+7)*.5,i,palettes[Math.abs(i)%palettes.length]);}
+    const vignette=ctx.createLinearGradient(0,655,0,720);vignette.addColorStop(0,'#655d7a00');vignette.addColorStop(1,ending?'#272e4b99':'#60557555');ctx.fillStyle=vignette;ctx.fillRect(0,655,width,65);
+    if(mode==='playing'&&!ending)for(const pit of game.pits){
+      const x=pit.x-camera;if(x>width||x+pit.w<0)continue;
+      const abyss=ctx.createLinearGradient(0,620,0,720);abyss.addColorStop(0,'#65748d');abyss.addColorStop(.55,'#3c526f');abyss.addColorStop(1,'#233c5e');ctx.fillStyle=abyss;ctx.fillRect(x,620,pit.w,100);
+      line(x,621,x,720,'#81798e',5);line(x+pit.w,621,x+pit.w,720,'#81798e',5);
+      for(let j=0;j<6;j++){const xx=x+10+hash(j+pit.x)*(pit.w-20);line(xx,650+j*10,xx+14,650+j*10,'#a3c3d044',1);}
+      for(let side of [0,pit.w]){star(x+side,609,3,'#ffe4b3');line(x+side,620,x+side,602,'#d2bd9b',1);}
+    }
+  }
+  function castle(x,y,scale=1,ending=false) {
+    ctx.save();ctx.translate(x,y);ctx.scale(scale,scale);
+    const halo=ctx.createRadialGradient(0,-100,5,0,-100,180);halo.addColorStop(0,'#ffedcc3d');halo.addColorStop(1,'#ffedcc00');ctx.fillStyle=halo;ctx.fillRect(-220,-350,440,400);
+    ellipse(0,3,135,14,'#60607823');
+    const wall=ctx.createLinearGradient(-100,0,100,-210);wall.addColorStop(0,ending?'#a897b1':'#ded0d4');wall.addColorStop(.55,ending?'#cab4c0':'#f4e1d9');wall.addColorStop(1,'#e7c9ce');
+    roundRect(-85,-133,170,133,5,wall);
+    function tower(tx,ty,w,h){roundRect(tx-w/2,ty-h,w,h,3,wall);ctx.beginPath();ctx.moveTo(tx-w*.72,ty-h);ctx.lineTo(tx,ty-h-w*.9);ctx.lineTo(tx+w*.72,ty-h);ctx.closePath();ctx.fillStyle='#b47e9b';ctx.fill();line(tx,ty-h-w*.9,tx,ty-h-w*.9-24,'#bca68a',1);ctx.beginPath();ctx.moveTo(tx,ty-h-w*.9-24);ctx.lineTo(tx+24,ty-h-w*.9-18);ctx.lineTo(tx,ty-h-w*.9-12);ctx.fillStyle='#ecd1ad';ctx.fill();roundRect(tx-5,ty-h+22,10,23,[6,6,0,0],'#9e8eab');roundRect(tx-3,ty-h+24,3,17,1,'#f8dfba');for(let k=0;k<3;k++)roundRect(tx-w/2+k*w/3+2,ty-h-5,w/3-4,9,1,'#f3ded9');}
+    tower(-89,0,47,173);tower(89,0,47,173);tower(0,-102,57,115);
+    roundRect(-48,-159,96,20,3,wall);for(let k=0;k<6;k++)roundRect(-47+k*17,-171,10,15,1,'#eddbd7');
+    for(let tx of [-49,49]){roundRect(tx-9,-105,18,36,[10,10,0,0],'#b296aa');roundRect(tx-6,-101,12,28,[7,7,0,0],'#eed6b9');line(tx,-100,tx,-73,'#bba3ad',2);line(tx-6,-88,tx+6,-88,'#bba3ad',2);}
+    const doorGlow=ctx.createRadialGradient(0,-24,2,0,-24,67);doorGlow.addColorStop(0,'#ffe6b99a');doorGlow.addColorStop(1,'#ffe6b900');ctx.fillStyle=doorGlow;ctx.fillRect(-70,-100,140,110);
+    roundRect(-23,-67,46,67,[25,25,0,0],'#a388a4');roundRect(-17,-59,34,59,[19,19,0,0],'#f7dfbc');heart(0,-36,10,'#ca8c9d');
+    for(let i=0;i<9;i++){let xx=-77+i*19;line(xx,-5,xx+11,-5,'#c5adb9',1);if(i%2===0)line(xx,-26,xx+9,-26,'#d3b9c3',1);}
+    roundRect(-37,-2,74,9,2,'#e4d5cd');roundRect(-46,7,92,8,2,'#cfc3c5');
+    for(let side of [-1,1])for(let j=0;j<8;j++)flower(side*(70+j*7),6,1+j*.07,j,'#dca1b1');
+    ctx.restore();
+  }
+  function character(x,y,girl=false,facing=1,walk=0,hug=false,scale=1) {
+    ctx.save();ctx.translate(x,y);ctx.scale(scale*facing,scale);const bounce=Math.abs(Math.sin(walk))*2;ctx.translate(0,-bounce);
+    ellipse(0,0,18,4,'#49456322');
+    ctx.lineCap='round';let leg=Math.sin(walk)*7;
+    line(-6,-15,-6+leg,-3,girl?'#e2b9b3':'#4f536e',7);line(6,-15,6-leg,-3,girl?'#e2b9b3':'#4f536e',7);
+    ellipse(-5+leg,-3,6,3,girl?'#a36d8b':'#3d425b');ellipse(8-leg,-3,6,3,girl?'#a36d8b':'#3d425b');
+    if(girl){ctx.beginPath();ctx.moveTo(-8,-37);ctx.quadraticCurveTo(-14,-22,-19,-12);ctx.quadraticCurveTo(0,-6,19,-12);ctx.lineTo(8,-37);ctx.fillStyle='#d28ba5';ctx.fill();ctx.beginPath();ctx.moveTo(-7,-35);ctx.quadraticCurveTo(-7,-22,-12,-12);ctx.strokeStyle='#edb7c5';ctx.lineWidth=3;ctx.stroke();}
+    else{roundRect(-11,-39,23,27,6,'#555d7c');roundRect(-12,-36,24,7,3,'#cf8a9b');ctx.beginPath();ctx.moveTo(-10,-33);ctx.lineTo(-23-Math.sin(time*4)*3,-25);ctx.lineTo(-17,-20);ctx.lineTo(-6,-32);ctx.fillStyle='#c57d96';ctx.fill();}
+    line(-8,-33,-12,-18,girl?'#e4b4b5':'#68708e',6);
+    line(9,-32,hug?24:13,-22+(hug?-5:Math.sin(walk)*4),girl?'#efc2b5':'#68708e',6);ellipse(hug?24:13,-22+(hug?-5:Math.sin(walk)*4),3.5,3.5,'#f2c9b4');
+    if(girl){ellipse(-3,-46,15,19,'#635065');roundRect(-16,-45,11,28,5,'#635065');}
+    ellipse(0,-47,12,13,'#f5d2ba');
+    ctx.beginPath();ctx.moveTo(-12,-48);ctx.bezierCurveTo(-16,-65,12,-67,13,-49);ctx.lineTo(8,-53);ctx.quadraticCurveTo(2,-50,-3,-56);ctx.lineTo(-8,-48);ctx.fillStyle=girl?'#645064':'#5a4b5c';ctx.fill();
+    ellipse(7,-46,1.2,1.5,'#53424f');ellipse(9,-42,3,1.5,'#e9a8a1');
+    if(girl){heart(-8,-59,5,'#e3a3af',-.4);ellipse(-8,-57,1,1,'#ffe3b9');}else{ctx.strokeStyle='#8c6270';ctx.lineWidth=1;ctx.beginPath();ctx.arc(7,-42,3,0,.8);ctx.stroke();}
+    ctx.restore();
+  }
+  function platform(p) {const x=p.x-camera;roundRect(x,p.y,p.w,p.h,[6,6,12,12],p.moving?'#b29cb6':'#b3a5b3');roundRect(x+4,p.y+13,p.w-8,10,[0,0,9,9],'#988da4');roundRect(x-3,p.y-3,p.w+6,10,5,p.moving?'#dec396':'#a5b29f');for(let j=0;j<p.w;j+=19){line(x+j,p.y,x+j+5,p.y-5,'#bdc5aa',2);if(j%3===0)flower(x+j+7,p.y+1,.65,j);}if(p.moving){ctx.fillStyle='#fff0c5';ctx.font='14px Georgia';ctx.textAlign='center';ctx.fillText('↔',x+p.w/2,p.y+18);} }
+  function hazard(h){const x=h.x-camera;for(let i=0;i<Math.ceil(h.w/12);i++){ctx.beginPath();ctx.moveTo(x+i*12-4,620);ctx.quadraticCurveTo(x+i*12-1,594-(i%2)*7,x+i*12+5,587+(i%2)*6);ctx.quadraticCurveTo(x+i*12+4,607,x+i*12+14,620);ctx.fillStyle=i%2?'#7f7a95':'#8c849f';ctx.fill();ellipse(x+i*12+4,609,2,3,'#b3a0b1');}star(x+h.w/2,576+(reduced?0:Math.sin(time*2)*3),3,'#ead5d1');}
+  function enemy(e){const x=e.x-camera+e.w/2,y=e.y+e.h;ctx.save();ctx.translate(x,y);ctx.scale(e.direction,1);ellipse(0,0,22,4,'#43445922');ellipse(-11+Math.sin(time*8)*2,-3,7,4,'#6c627d');ellipse(11-Math.sin(time*8)*2,-3,7,4,'#6c627d');roundRect(-19,-30,38,28,[16,16,9,9],'#897b9a');ctx.beginPath();ctx.moveTo(-17,-24);ctx.lineTo(-13,-39);ctx.lineTo(-4,-28);ctx.lineTo(6,-27);ctx.lineTo(14,-39);ctx.lineTo(18,-22);ctx.fillStyle='#897b9a';ctx.fill();ellipse(7,-17,7,8,'#cbbbcf');ellipse(9,-17,2,3,'#4b4664');line(3,-25,13,-23,'#564b70',2);ctx.restore();}
+  function checkpoint(cp,index){const x=cp.x-camera;if(x<-70||x>width+70)return;const active=index<=game.checkpointIndex;line(x,620,x,527,'#d8bb94',3);roundRect(x-10,615,20,6,2,'#b1a3a5');ctx.beginPath();ctx.moveTo(x+2,529);ctx.quadraticCurveTo(x+25,520+(reduced?0:Math.sin(time*2)*4),x+45,530);ctx.lineTo(x+40,555);ctx.quadraticCurveTo(x+20,549,x+2,554);ctx.fillStyle=active?'#f3c897':'#b29ebd';ctx.fill();heart(x+21,542,7,active?'#fff1d6':'#ddcedd');star(x,521,active?6:4,active?'#fff0c5':'#e4d4df');}
+  function rescueScene(){
+    const elapsed=3.6-game.deathTimer,fade=Math.min(1,elapsed/.6);ctx.save();ctx.fillStyle='#17223fc9';ctx.fillRect(0,0,width,720);
+    const x=width/2,y=490;const halo=ctx.createRadialGradient(x,y,8,x,y,180);halo.addColorStop(0,'#d6e9ff55');halo.addColorStop(1,'#b5d6ff00');ctx.globalAlpha=fade;ctx.fillStyle=halo;ctx.fillRect(x-190,y-190,380,380);
+    ctx.save();ctx.translate(x-35,555);ctx.rotate(-1.25);ctx.globalAlpha=.7;character(0,0,true,1,0,false,1.3);ctx.restore();
+    ctx.globalAlpha=fade*(.6+Math.sin(time*3)*.1);ctx.shadowColor='#b4daff';ctx.shadowBlur=25;character(x+35,535-(reduced?0:Math.sin(time*2)*5),false,-1,0,true,1.55);ctx.shadowBlur=0;
+    for(let i=0;i<30;i++){const a=i/30*Math.PI*2+elapsed*.7,r=90-elapsed*12;star(x+Math.cos(a)*r,520+Math.sin(a)*r*.5-elapsed*9,2+hash(i)*2,'#d3e9ff');}
+    if(elapsed>1.3){ctx.globalAlpha=Math.min(1,elapsed-1.3);heart(x,433,16,'#ffd8d0');line(x+17,475,x-15,505,'#e2eaff88',2);}ctx.restore();
+  }
+  function ambient(ending=false) {
+    const count = reduced ? 8 : ending ? 48 : 26;
+    for(let i=0;i<count;i++){let x=((hash(i+51)*width+(reduced?0:time*(4+hash(i)*6)))%(width+30))-15;let y=((hash(i+21)*700+(reduced?0:time*(3+hash(i+9)*5)))%720);ctx.globalAlpha=.2+hash(i+10)*.4;if(i%3===0){ctx.save();ctx.translate(x,y);ctx.rotate(time*.2+i);ellipse(0,0,3,1.5,'#ffe5df');ctx.restore();}else{ellipse(x,y,1.3,1.3,'#fff0bd');}}ctx.globalAlpha=1;
+  }
+  function spawnBurst(x,y,colors=palettes,count=20,heartShape=false) {for(let i=0;i<count;i++){const angle=random(0,Math.PI*2),speed=random(20,100);particles.push({x,y,vx:Math.cos(angle)*speed,vy:Math.sin(angle)*speed-35,life:random(.6,1.5),max:1.5,color:colors[i%colors.length],size:random(2,5),heart:heartShape});}}
+  function drawParticles(dt){for(let i=particles.length-1;i>=0;i--){const p=particles[i];p.life-=dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=35*dt;if(p.life<=0){particles.splice(i,1);continue;}ctx.globalAlpha=Math.max(0,p.life/p.max);if(p.heart)heart(p.x,p.y,p.size,p.color,p.life);else star(p.x,p.y,p.size,p.color);}ctx.globalAlpha=1;}
+  function launchFirework() {
+    const x=random(width*.08,width*.92),y=random(65,350),color=palettes[Math.floor(random(0,palettes.length))];
+    const points=[];const heartStyle=Math.random()>.45;
+    const scale=width<600?.7:1;
+    for(let i=0;i<100;i++){const a=i/100*Math.PI*2,r=heartStyle?1:random(.6,1);let vx,vy;if(heartStyle){vx=16*Math.pow(Math.sin(a),3)*8*scale;vy=-(13*Math.cos(a)-5*Math.cos(2*a)-2*Math.cos(3*a)-Math.cos(4*a))*8*scale;}else{vx=Math.cos(a)*r*145*scale;vy=Math.sin(a)*r*145*scale;}points.push({vx,vy});}
+    fireworks.push({x,y,color,age:0,points});
+  }
+  function drawFireworks(dt,elapsed) {
+    if(!reduced&&elapsed>1&&time>nextFirework){launchFirework();nextFirework=time+random(.65,1.15);}
+    for(let i=fireworks.length-1;i>=0;i--){const f=fireworks[i];f.age+=dt;if(f.age>2.5){fireworks.splice(i,1);continue;}const a=f.age,ease=1-Math.exp(-a*1.9);ctx.globalAlpha=Math.max(0,1-a/2.5);ctx.strokeStyle=f.color;ctx.lineWidth=1.2;ctx.shadowColor=f.color;ctx.shadowBlur=6;
+      for(const p of f.points){let x=f.x+p.vx*ease,y=f.y+p.vy*ease+a*a*8;line(x-p.vx*.06,y-p.vy*.06,x,y,f.color,1.4);ellipse(x,y,1.5,1.5,'#fff4dc');}ctx.shadowBlur=0;
+    }ctx.globalAlpha=1;
+  }
+  function celebration(dt) {
+    const elapsed=time-endingAt;background(true);drawFireworks(dt,elapsed);
+    const glow=ctx.createRadialGradient(width/2,600,0,width/2,600,250);glow.addColorStop(0,'#ffe6b73a');glow.addColorStop(1,'#ffe6b700');ctx.fillStyle=glow;ctx.fillRect(0,350,width,370);
+    for(let i=0;i<12;i++){
+      const rise=reduced?hash(i)*600:(elapsed*(10+hash(i)*9)+hash(i+7)*650)%800;
+      const x=hash(i+71)*width+Math.sin(time*.3+i)*8,y=760-rise;
+      ctx.globalAlpha=.28;const lamp=ctx.createRadialGradient(x,y,0,x,y,28);lamp.addColorStop(0,'#ffe5b7aa');lamp.addColorStop(1,'#ffe5b700');ctx.fillStyle=lamp;ctx.fillRect(x-28,y-28,56,56);ctx.globalAlpha=.6;roundRect(x-5,y-8,10,14,3,'#fce1b5');line(x-3,y+8,x,y+15,'#e9bc90',.7);line(x+3,y+8,x,y+15,'#e9bc90',.7);
+    }ctx.globalAlpha=1;
+    // A slowly breathing constellation frames the message without covering it.
+    const radius=Math.min(width*.42,290),centerX=width/2,centerY=310;
+    for(let i=0;i<100;i++){const a=i/100*Math.PI*2;const xx=16*Math.pow(Math.sin(a),3)/16;const yy=-(13*Math.cos(a)-5*Math.cos(2*a)-2*Math.cos(3*a)-Math.cos(4*a))/16;const shimmer=reduced?1:.55+Math.sin(time*1.4+i)*.35;ctx.globalAlpha=Math.min(1,Math.max(0,(elapsed-2)/3))*shimmer*.5;star(centerX+xx*radius,centerY+yy*radius*.88,1.8+hash(i)*1.3,'#ffe8b5');}ctx.globalAlpha=1;
+    castle(width*.83,620,width<600?.58:.8,true);ground(true);
+    // The approach becomes an embrace, then a ring of tiny hearts appears.
+    const approach=reduced?1:Math.min(1,elapsed/3),distance=64-approach*48;
+    character(width/2-distance,646,true,1,approach<1?time*9:0,approach>=1,1.12);
+    character(width/2+distance,646,false,-1,0,approach>=1,1.12);
+    if(elapsed>2.7){heart(width/2,558+(reduced?0:Math.sin(time*1.3)*4),13,'#f8b2bf');for(let i=0;i<6;i++){let a=time*.3+i*1.04;ctx.globalAlpha=.5;star(width/2+Math.cos(a)*65,599+Math.sin(a)*31,2,'#ffe5b3');}ctx.globalAlpha=1;}
+    ambient(true);drawParticles(dt);
+  }
+  function render(dt) {
+    ctx.clearRect(0,0,width,720);
+    if(mode==='ending'){celebration(dt);return;}
+    background();
+    if(mode==='intro'){
+      castle(width*.79,620,width<600?.77:1.07);
+      ground();character(width*(width<600?.36:.57),620,true,1,0,false,width<600?1.05:1.2);character(width*.79+15,620,false,-1,0,false,1.07);
+      for(let i=0;i<3;i++)heart(width*(width<600?.46:.62)+i*26,559-i*12+Math.sin(time+i)*4,5+i,'#f2ced0',-.2);
+    } else {
+      castle(game.end+85-camera,620,.97);
+      ground();for(const p of game.platforms)if(p.x-camera<width+50&&p.x+p.w-camera>-50)platform(p);
+      for(const h of game.hazards)if(h.x-camera<width+50&&h.x-camera>-60)hazard(h);
+      for(const e of game.enemies)if(!e.dead&&e.x-camera<width+50&&e.x-camera>-60)enemy(e);
+      game.checkpoints.forEach(checkpoint);
+      for(const h of game.hearts)if(!h.taken&&h.x-camera>-30&&h.x-camera<width+30){let y=h.y+(reduced?0:Math.sin(time*2+h.x)*5);ctx.shadowColor='#ffd3ad';ctx.shadowBlur=20;heart(h.x-camera,y,14,'#ffd4a1');ctx.shadowBlur=0;star(h.x-camera-13,y-14,2,'#fff6d9');}
+      character(game.end+40-camera,620,false,-1,0,false,1.1);
+      const p=game.player;ctx.globalAlpha=p.invulnerable>0&&Math.sin(time*22)>0?.45:1;character(p.x-camera+p.w/2,p.y+p.h,true,p.facing,p.grounded&&Math.abs(p.vx)>30?time*11:0);ctx.globalAlpha=1;
+      drawParticles(dt);
+      if(game.player.x<230&&time<12){ctx.fillStyle='#6d647d';ctx.font='12px "Microsoft YaHei",sans-serif';ctx.textAlign='center';ctx.fillText('向前走，去见你想见的人 →',240-camera,490);}
+    }
+    ambient();if(mode==='playing'&&game.deathTimer>0)rescueScene();
+  }
+  function toast(text,duration=3){$('toast').textContent=text;$('toast').classList.add('show');toastUntil=time+duration;}
+  function resetInput(){for(const k of Object.keys(input)){input[k]=false;keyInputs[k]=false;touchInputs[k].clear();}document.querySelectorAll('[data-key]').forEach(b=>b.classList.remove('pressed'));}
+  function syncInput(){for(const k of Object.keys(input))input[k]=keyInputs[k]||touchInputs[k].size>0;}
+  function start(){
+    game=new LoveGame();camera=0;particles=[];fireworks=[];lastCount=0;lastRescues=0;lastDeaths=0;lastHits=0;lastCheckpoint=0;lastStomps=0;mode='playing';resetInput();
+    document.title='奔向你 · 星光冒险';$('edition').textContent='穿越星光 · 去见你';$('brand-subtitle').textContent='ONE DESTINATION. ONLY YOU.';$('scroll-note').textContent='循着星光，去见想见的人 ✧';$('chapter-name').textContent='夕照花径 · 月光浮岛 · 星桥城堡';$('rescue-overlay').hidden=true;
+    stage.dataset.mode='playing';$('intro').hidden=true;$('scene-label').hidden=true;$('ending').hidden=true;$('pause-overlay').hidden=true;$('hud').hidden=false;$('touch-controls').hidden=false;$('scene-bottom').hidden=false;
+    $('heart-count').textContent='0';$('progress-label').textContent='0%';$('progress').style.width='0%';updateVitals();canvas.focus({preventScroll:true});toast('他在城堡等你。避开荆棘，跳过断桥。',4);
+  }
+  function updateVitals(){$('health').textContent='♥'.repeat(game.health)+'♡'.repeat(3-game.health);$('health').setAttribute('aria-label','生命 '+game.health+' 格');$('death-count').textContent='陨落 '+game.deaths+' 次';}
+  function win(){mode='ending';endingAt=time;nextFirework=time+1;resetInput();stage.dataset.mode='ending';$('hud').hidden=true;$('touch-controls').hidden=true;$('scene-bottom').hidden=true;$('ending').hidden=false;$('toast').classList.remove('show');document.title='奔向你 · 我们的第 1000 天';$('edition').textContent='献给我们 · 第 1000 天';$('brand-subtitle').textContent='A THOUSAND DAYS, WITH YOU.';$('scroll-note').textContent='为你，认真心动 1000 次 ✧';$('chapter-name').textContent='原来，终点是我们的第 1000 天';spawnBurst(width/2,500,palettes,45,true);music.celebrate();}
+  function pause(value){if(mode!=='playing')return;game.paused=value;resetInput();$('pause-overlay').hidden=!value;if(value)$('resume').focus({preventScroll:true});else canvas.focus({preventScroll:true});}
+  function frame(stamp){
+    const dt=last?Math.min((stamp-last)/1000,.05):.016;last=stamp;
+    if(!document.hidden){time+=dt;
+      if(mode==='playing'&&!game.paused){game.step(dt,input);const desired=Math.max(0,Math.min(game.end-width*.65,game.player.x-width*.32));camera+=(desired-camera)*Math.min(1,dt*7);
+        const progress=Math.max(0,Math.min(100,Math.round((game.player.x-100)/(game.end-120)*100)));$('progress-label').textContent=progress+'%';$('progress').style.width=progress+'%';
+        if(game.collected>lastCount){for(const h of game.hearts)if(h.taken&&!h.shown){h.shown=true;spawnBurst(h.x-camera,h.y,['#ffe0a8','#fff0d4','#f8bbc8'],22,true);}lastCount=game.collected;$('heart-count').textContent=lastCount;toast(memories[lastCount-1]);music.chime();}
+        if(game.hits>lastHits){lastHits=game.hits;updateVitals();if(game.deathTimer===0)toast('受伤了！还剩 '+game.health+' 格生命，留意脚下。',2);}
+        if(game.deaths>lastDeaths){lastDeaths=game.deaths;resetInput();updateVitals();$('toast').classList.remove('show');$('rescue-overlay').hidden=false;music.rescue();}
+        if(game.rescues>lastRescues){lastRescues=game.rescues;resetInput();updateVitals();$('rescue-overlay').hidden=true;toast('「我一直都在。」星光将你唤回了存档点。',3);}
+        if(game.checkpointIndex>lastCheckpoint){lastCheckpoint=game.checkpointIndex;updateVitals();$('chapter-name').textContent=game.checkpoints[lastCheckpoint].name+' · 星光已存档';toast('星光存档点已点亮 · 生命恢复',3);music.chime();}
+        if(game.stomps>lastStomps){lastStomps=game.stomps;toast('漂亮！踩中巡逻怪了。',1.5);music.chime();}
+        if(game.won)win();
+      }
+      if(time>toastUntil)$('toast').classList.remove('show');render(game.paused?0:dt);
+    }requestAnimationFrame(frame);
+  }
+  const keyMap={ArrowLeft:'left',a:'left',A:'left',ArrowRight:'right',d:'right',D:'right',ArrowUp:'jump',w:'jump',W:'jump',' ':'jump'};
+  document.addEventListener('keydown',e=>{
+    if(document.querySelector('dialog[open]'))return;
+    if(e.key==='Escape'&&mode==='playing'){e.preventDefault();pause(!game.paused);return;}
+    if(mode!=='playing'||game.paused)return;
+    if(keyMap[e.key]){e.preventDefault();keyInputs[keyMap[e.key]]=true;syncInput();}
+  });
+  document.addEventListener('keyup',e=>{if(keyMap[e.key]){keyInputs[keyMap[e.key]]=false;syncInput();if(mode==='playing')e.preventDefault();}});
+  document.querySelectorAll('[data-key]').forEach(button=>{
+    const key=button.dataset.key;
+    button.addEventListener('pointerdown',e=>{if(mode!=='playing'||game.paused)return;e.preventDefault();button.setPointerCapture(e.pointerId);touchInputs[key].add(e.pointerId);button.classList.add('pressed');syncInput();});
+    const release=e=>{touchInputs[key].delete(e.pointerId);if(!touchInputs[key].size)button.classList.remove('pressed');syncInput();};
+    button.addEventListener('pointerup',release);button.addEventListener('pointercancel',release);button.addEventListener('lostpointercapture',release);
+    button.addEventListener('contextmenu',e=>e.preventDefault());
+  });
+  window.addEventListener('blur',()=>{resetInput();if(mode==='playing')pause(true);});
+  document.addEventListener('visibilitychange',()=>{last=0;if(document.hidden&&mode==='playing')pause(true);});
+  $('start').onclick=()=>{start();music.set(true);};$('pause').onclick=()=>pause(true);$('resume').onclick=()=>pause(false);$('restart').onclick=start;$('replay').onclick=start;
+  function openDialog(dialog){if(mode==='playing'&&!game.paused){pause(true);dialog.dataset.resume='true';}dialog.showModal();}
+  $('help').onclick=()=>openDialog($('help-dialog'));$('read-letter').onclick=()=>openDialog($('letter-dialog'));
+  document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());
+  document.querySelectorAll('dialog').forEach(d=>{d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});d.addEventListener('close',()=>{if(d.dataset.resume){delete d.dataset.resume;pause(false);}});});
+  // All audio is synthesized locally and starts only after an explicit user gesture.
+  const music={context:null,gain:null,timer:null,index:0,
+    note(freq,duration=.9,volume=.1,delay=0){if(!musicEnabled||!this.context)return;const c=this.context,osc=c.createOscillator(),g=c.createGain(),at=c.currentTime+delay;osc.type='sine';osc.frequency.value=freq;g.gain.setValueAtTime(0,at);g.gain.linearRampToValueAtTime(volume,at+.03);g.gain.exponentialRampToValueAtTime(.0001,at+duration);osc.connect(g);g.connect(this.gain);osc.start(at);osc.stop(at+duration+.1);},
+    set(enabled){try{if(enabled&&!this.context){const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)return;this.context=new Audio();this.gain=this.context.createGain();this.gain.gain.value=.42;this.gain.connect(this.context.destination);}clearInterval(this.timer);this.timer=null;musicEnabled=enabled;if(enabled){this.context.resume().catch(()=>{});this.tick();this.timer=setInterval(()=>this.tick(),540);}else{this.context?.suspend().catch(()=>{});}$('sound').setAttribute('aria-pressed',String(enabled));$('sound').setAttribute('aria-label',enabled?'关闭音乐':'开启音乐');$('mute-line').style.display=enabled?'none':'';}catch{musicEnabled=false;}},
+    tick(){if(document.hidden||game.paused)return;const melody=[523.25,659.25,783.99,659.25,587.33,659.25,523.25,440,493.88,587.33,739.99,587.33,523.25,659.25,587.33,0];const f=melody[this.index%melody.length];if(f)this.note(f,1.45,.1);if(this.index%4===0){const bass=[130.81,110,146.83,130.81][Math.floor(this.index/4)%4];this.note(bass,2.5,.1);this.note(bass*1.5,2.4,.035);}this.index++;},
+    chime(){[783.99,987.77,1174.66].forEach((f,i)=>this.note(f,.9,.13,i*.11));},
+    celebrate(){[523.25,659.25,783.99,1046.5,1318.51,1567.98].forEach((f,i)=>this.note(f,2,.14,i*.25));},
+    rescue(){[261.63,392,523.25,659.25,783.99].forEach((f,i)=>this.note(f,2.3,.11,i*.45));}
+  };
+  $('sound').onclick=()=>music.set(!musicEnabled);
+  function saveCard(){
+    const c=document.createElement('canvas');c.width=1400;c.height=1800;const g=c.getContext('2d');const gradient=g.createLinearGradient(0,0,0,1800);gradient.addColorStop(0,'#263350');gradient.addColorStop(.55,'#8c6a8b');gradient.addColorStop(1,'#edc1b2');g.fillStyle=gradient;g.fillRect(0,0,1400,1800);
+    for(let i=0;i<200;i++){g.globalAlpha=.2+hash(i)*.6;g.fillStyle='#ffe6bb';g.beginPath();g.arc(hash(i+3)*1400,hash(i+12)*1800,hash(i+21)*2+1,0,7);g.fill();}g.globalAlpha=1;g.strokeStyle='#efd1aa88';g.lineWidth=1;g.strokeRect(60,60,1280,1680);g.strokeRect(73,73,1254,1654);g.textAlign='center';g.fillStyle='#f8dfbb';g.font='23px Georgia';g.fillText('A THOUSAND DAYS, WITH YOU',700,260);
+    g.font='260px Georgia';g.fillText('1000',700,675);g.font='28px Georgia';g.fillText('D A Y S   O F   U S',700,755);g.font='47px "SimSun",serif';g.fillText('和你在一起的第 1000 天',700,930);g.font='60px Georgia';g.fillText('♡',700,1050);g.font='32px "SimSun",serif';g.fillText('原来最好的通关奖励，',700,1180);g.fillText('是走过一千天，身边依然是你。',700,1240);g.font='29px "SimSun",serif';g.fillText('第 1001 天，想和你一起。',700,1430);g.fillText('以后的每一天，也都想。',700,1490);g.font='19px Georgia';g.fillText('OUR STORY IS STILL BEING WRITTEN.',700,1650);
+    c.toBlob(blob=>{if(!blob){toast('暂时无法生成纪念卡，请再试一次。');return;}const url=URL.createObjectURL(blob),a=document.createElement('a');a.download='我们的第1000天.png';a.href=url;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);toast('这一刻，值得好好收藏 ♡',3);});
+  }
+  $('keepsake').onclick=saveCard;
+  resize();requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
